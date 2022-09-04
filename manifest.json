@@ -1,0 +1,16 @@
+{
+    "name": "Export Lautman Courses",
+    "version": "1.0.0",
+    "description": "Add the ability to export your bid-it schedule in a way easily pasteable to the Lautman forms.",
+    "manifest_version": 3,
+    "author": "yoga",
+    "icons": {"128": "export.png" },
+    "content_scripts": [
+        {
+            "matches": ["https://bid-it.appspot.com/"],
+            "js": ["tab_script.js"]
+        }
+    ]
+}
+
+
