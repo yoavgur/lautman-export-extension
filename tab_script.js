@@ -482,18 +482,13 @@ const exportLatuman = () => {
     const name = course.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.firstChild.getElementsByClassName("accordion-toggle")[0].textContent
     const depNum = number.slice(0,4)
 
-    var type = "TypError"
-    if (course.textContent.includes("תרגיל")) {
-      type = "תרגיל"
-    } else if (course.textContent.includes("שיעור")) {
-      type = "שיעור"
-    }
+    const type = course.textContent.slice(course.textContent.indexOf("("), course.textContent.indexOf(")")+1)
 
     if (!(depNum in exp)) {
       exp[depNum] = ""
     }
 
-    const row = `${tabbize(number.slice(8,10))}${tabbize(number.slice(0,8))}9\t9\t9\t${name.slice(0, name.indexOf("(") - 1)} (${type})\n`
+    const row = `${tabbize(number.slice(8,10))}${tabbize(number.slice(0,8))}9\t9\t9\t${name.slice(0, name.indexOf("(") - 1)} - ${type}\n`
     exp[depNum] += row
   }
 
