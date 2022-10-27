@@ -503,7 +503,7 @@ const exportLatuman = () => {
 
 const printDiv = document.getElementById("goToPrint")
 const button = document.createElement("button");
-const buttonText = document.createTextNode("גרסא ללאוטמן")
+const buttonText = document.createTextNode("גרסה ללאוטמן")
 button.appendChild(buttonText);
 button.style.marginRight = "5px"
 button.setAttribute("class", "btn btn-info")
